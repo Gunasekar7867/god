@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: rgb(245, 49, 49);
+        }
+        .home{
+            /* width: 100%; */
+            /* width: 100%; */
+            /* background-color: rgb(9, 228, 199); */
+            color: white;
+            font-size: 35px;
+            padding: 5px 5%;
+            line-height: 50px;
+        }
+        .home{
+            display: grid;
+            grid-template-columns: repeat(2,2fr);
+        }
+        .color-img img{
+            height: 550px;
+            width: 550px;
+        }
+        .button{
+            margin-left: 240px;  
+        }
+        .text{
+            font-weight: 200;
+        }
+       button{
+        height: 30px;
+        width: 30px;
+        border-radius: 40%;
+        border: none;
+       }
+       .black{
+        background-color: black;
+       }
+       .gray{
+        background-color: gray;
+       }
+       @media (max-width:500px){
+        .home{
+            display: flex;
+            flex-wrap: wrap;
+            /* gap: 0; */
+            font-size: 20px;
+        }
+        .color-img img{
+            height: 350px;
+            width: 350px;
+            /* font-size: 10px; */
+        }
+        .button{
+            margin-left: 150px;  
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="home">
+        <div class="text">
+                <p>
+                    <h2>MAVRICK</h2>
+                    Engine Capacity : 400 CC<br>
+                    Mileage : 32kmpl<br>
+                    Transmission : 6 Speed manual<br>
+                    Kerb Weight : 191 kg<br>
+                    Fuel Tank Capacity : 13.5 litres<br>
+                    Seat Height : 803 mm<br>
+                    Price : 100<br>
+                    <button1 class="buy">Buy Now</button>
+                </p>
+                </div>
+                <div class="color-img">
+                    <img id="change" src="mavrickblack.png">
+                    <div class="button">
+                        <button class="black"></button>
+                        <button class="gray"></button>
+                    </div>
+                </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function($){
+            $('.black').on({
+                'click':function(){
+                    $('#change').attr('src','mavrickgray.png');
+                }
+            });
+            $('.gray').on({
+                'click':function(){
+                    $('#change').attr('src','mavrickblack.png');
+                }
+            });
+            $('.yellow').on({
+                'click':function(){
+                    $('#change').attr('src','destiny.jpg');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
